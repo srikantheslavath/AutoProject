@@ -1,6 +1,7 @@
 package com.PageClassPackage;
 
 import com.BaseClassPackage.BaseClass;
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -19,8 +20,8 @@ public class HomePage extends BaseClass {
 
         PageFactory.initElements(driver,this);
 
-       // logger= Logger.getLogger(HomePage.class);
-       // logger.info("we are in home page");
+        logger= Logger.getLogger(HomePage.class);
+        logger.info("we are in home page");
     }
 
     public String VerifyTitle(){
@@ -28,7 +29,9 @@ public class HomePage extends BaseClass {
         return title;
 
     }
+
     public boolean verifywbllogo(){
+
         boolean logo =wbqa.isDisplayed();
         return logo;
 

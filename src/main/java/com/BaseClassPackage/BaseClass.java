@@ -2,6 +2,8 @@ package com.BaseClassPackage;
 
 import com.UtilityPackage.UtilsClass;
 import io.github.bonigarcia.wdm.WebDriverManager;
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
@@ -15,7 +17,7 @@ public class BaseClass {
 
     public static WebDriver driver;
     public static Properties prop;
-    //public static Logger logger=null;
+    public static Logger logger=null;
 
 
     public BaseClass() {
@@ -30,8 +32,8 @@ public class BaseClass {
         } catch (IOException e) {
             e.printStackTrace();
         }
-       // String log4jpath =System.getProperty("user.dir")+"/src/main/resources/log4j.properties";
-        //PropertyConfigurator.configure(log4jpath);
+         String log4jpath =System.getProperty("user.dir")+"/src/main/resources/log4j.properties";
+        PropertyConfigurator.configure(log4jpath);
 
     }
 
@@ -51,7 +53,10 @@ public class BaseClass {
         }
 
          */
+
         driver=new ChromeDriver();
+
+
 
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(UtilsClass.PAGE_LOAD_TIMEOUT, TimeUnit.SECONDS);

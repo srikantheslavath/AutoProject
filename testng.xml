@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/Sampath Velupula/IdeaProjects/AutoProject">
+        <classes>
+            <class name="com.PageTestPackage.HomePageTest">
+                <methods><include name="TestTitle"/><include name="VerifywblLogoTest"/>
+                    <include name="VerifystudentTest"/>
+                    <include name="TestLoginBtn"/>
+                </methods>
+            </class>
+            <class name="com.PageTestPackage.LoginPageTest">
+                <methods>
+                    <include name="VerifyLoginTitleTest"/>
+                    <include name="VerifyRegisterbtn"/>
+                    <include name="LoginDataTest"/>
+                </methods>
+            </class>
+
+        </classes>
+    </test>
+</suite>
